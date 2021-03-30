@@ -1,0 +1,22 @@
+{
+  "name": "randomWeb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx postcss global.css -o src/local.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postcss-cli": "^8.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^2.0.4"
+  },
+  "devDependencies": {
+    "parcel": "*"
+  }
+}

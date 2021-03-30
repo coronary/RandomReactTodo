@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="786df2b94d4c3046b016bfcb481b76e9">
+    <title>Random</title>
+</head>
+<body>
+    <main class="flex h-screen justify-between bg-citwhite">
+    <div class="first w-1/4"></div>
+    <div id="root" class="flex-grow"></div>
+    <div class="second w-1/4"></div>
+    </main>
+    
+
+    <script src="aac22b9fb67ec9d9bfbec694409f853e"></script>
+</body>
+</html>

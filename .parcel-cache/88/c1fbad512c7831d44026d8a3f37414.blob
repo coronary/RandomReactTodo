@@ -1,0 +1,118 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "/home/cjdekalb/projects/randomWeb/src/App.jsx", _s = $RefreshSig$();
+  function under(e) {
+    let el = e.target;
+    if (e.target.children.length > 0) el = e.target.querySelector('p');
+    if (el.classList.contains('line-through')) {
+      el.classList.remove('line-through');
+    } else el.classList.add('line-through');
+  }
+  const check = () => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "check",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 5
+        }
+      }, "✓")
+    );
+  };
+  function Todo(todo) {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        onClick: under,
+        className: "todo hover:bg-mauve-light text-gun-dark p-4 text-3xl bg-mauve flex items-center",
+        key: todo.id,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "check h-7 w-7 bg-citwhite-light mr-2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20,
+          columnNumber: 9
+        }
+      }, todo.title))
+    );
+  }
+  _c = Todo;
+  function App() {
+    _s();
+    const [todo_items, setTodos] = _react.useState([]);
+    _react.useEffect(() => {
+      fetch('https://jsonplaceholder.typicode.com/posts?userId=1').then(response => response.json()).then(json => {
+        let x = json.map(todo => Todo(todo));
+        setTodos(x);
+      });
+    }, todo_items);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "App",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "todo-title bg-chetblue text-gun text-center font-bold py-4 rounded-t-lg mt-3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "uppercase text-3xl",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 9
+        }
+      }, "todo")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "todo-holder flex-col",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 7
+        }
+      }, todo_items))
+    );
+  }
+  exports.default = App;
+  _s(App, "nHzqcFcMd6bIA5zZKELQfOdbMHU=");
+  _c2 = App;
+  var _c, _c2;
+  $RefreshReg$(_c, "Todo");
+  $RefreshReg$(_c2, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
